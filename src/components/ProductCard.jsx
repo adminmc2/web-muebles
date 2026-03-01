@@ -41,23 +41,35 @@ export default function ProductCard({ product }) {
       )}
       <div className="card-body">
         <h3>{displayName}</h3>
-        <p className="price"><Tag size={18} weight="fill" />{price} €</p>
+        <p className="price">
+          <Tag size={18} weight="fill" />{price} €
+          {product.originalPrice && <span className="price-original">{product.originalPrice} €</span>}
+        </p>
         <p className="desc">{displayDesc}</p>
         <div className="card-specs">
+          {product.dimensions && (
+            <div className="card-spec">
+              <span className="card-spec-label">{t.dimensionsLabel}</span>
+              <span className="card-spec-value">{lang === 'en' ? product.dimensions_en : product.dimensions}</span>
+            </div>
+          )}
           {product.condition && (
-            <span className="card-spec">
-              {product.condition === 'new' ? t.conditionNew : t.conditionUsed}
-            </span>
+            <div className="card-spec">
+              <span className="card-spec-label">{t.conditionLabel}</span>
+              <span className="card-spec-value">{product.condition === 'new' ? t.conditionNew : t.conditionUsed}</span>
+            </div>
           )}
           {product.usage && (
-            <span className="card-spec">
-              {t.usageLabel}: {lang === 'en' ? product.usage_en : product.usage}
-            </span>
+            <div className="card-spec">
+              <span className="card-spec-label">{t.usageLabel}</span>
+              <span className="card-spec-value">{lang === 'en' ? product.usage_en : product.usage}</span>
+            </div>
           )}
           {product.includes && (
-            <span className="card-spec">
-              {t.includesLabel}: {lang === 'en' ? product.includes_en : product.includes}
-            </span>
+            <div className="card-spec">
+              <span className="card-spec-label">{t.includesLabel}</span>
+              <span className="card-spec-value">{lang === 'en' ? product.includes_en : product.includes}</span>
+            </div>
           )}
         </div>
         <div className="actions">
