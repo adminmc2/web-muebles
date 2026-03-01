@@ -152,13 +152,14 @@ export default function ProductModal({ product, displayImg, onClose, onOpenCombo
                             )}
                           </div>
                         ))}
-                      </div>
-                      <div className="modal-combo-info">
-                        <span className="modal-combo-price">{combo.comboPrice} €</span>
-                        <span className="modal-combo-original">{totalPrice} €</span>
-                        <span className="modal-combo-save">
-                          {lang === 'en' ? `Save ${savings} €` : `Ahorras ${savings} €`}
-                        </span>
+                        <span className="modal-combo-equals">=</span>
+                        <div className="modal-combo-result">
+                          <span className="modal-combo-price">{combo.comboPrice} €</span>
+                          <span className="modal-combo-original">{totalPrice} €</span>
+                          <span className="modal-combo-save">
+                            {lang === 'en' ? `Save ${savings} €` : `Ahorras ${savings} €`}
+                          </span>
+                        </div>
                       </div>
                     </div>
                   );
