@@ -1,5 +1,11 @@
-import { Tag, MapPin, ArrowDown, Globe } from '@phosphor-icons/react';
+import { Tag, MapPin, ArrowDown, Globe, Armchair, Lamp, Table } from '@phosphor-icons/react';
 import { useLanguage } from '../i18n';
+
+const heroCategories = [
+  { icon: Armchair, labelKey: 'catArmchairs' },
+  { icon: Table, labelKey: 'catTables' },
+  { icon: Lamp, labelKey: 'catLamp' },
+];
 
 export default function Header({ totalProducts, soldCount }) {
   const { lang, toggleLang, t } = useLanguage();
@@ -37,13 +43,21 @@ export default function Header({ totalProducts, soldCount }) {
                 </div>
               </div>
             )}
-            <div className="hero-stat">
+            <a className="hero-stat hero-stat-link" href="https://www.google.com/maps/search/?api=1&query=28005+Madrid" target="_blank" rel="noopener noreferrer">
               <MapPin size={18} weight="fill" />
               <div>
                 <strong>Madrid</strong>
-                <span>{t.pickup}</span>
               </div>
-            </div>
+            </a>
+          </div>
+
+          <div className="hero-categories">
+            {heroCategories.map(({ icon: Icon, labelKey }) => (
+              <span key={labelKey} className="hero-cat-pill">
+                <Icon size={14} weight="fill" />
+                {t[labelKey]}
+              </span>
+            ))}
           </div>
 
           <a href="#products" className="hero-cta">

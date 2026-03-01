@@ -1,13 +1,12 @@
-import { SquaresFour, Chair, Lamp, Table, Couch, LampPendant, TagIcon } from '@phosphor-icons/react';
+import { SquaresFour, Armchair, Lamp, Table, TagIcon } from '@phosphor-icons/react';
 import { useLanguage } from '../i18n';
 
 const categories = [
   { key: 'all', icon: SquaresFour, labelKey: 'catAll' },
   { key: 'offers', icon: TagIcon, labelKey: 'catOffers' },
-  { key: 'chairs', icon: Chair, labelKey: 'catChairs' },
+  { key: 'armchairs', icon: Armchair, labelKey: 'catArmchairs' },
   { key: 'tables', icon: Table, labelKey: 'catTables' },
   { key: 'lamp', icon: Lamp, labelKey: 'catLamp' },
-  { key: 'accessories', icon: Couch, labelKey: 'catAccessories' },
 ];
 
 export default function CategoryBar({ active, onChange }) {

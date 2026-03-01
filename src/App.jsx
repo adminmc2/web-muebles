@@ -19,7 +19,7 @@ function Home() {
     activeCategory === 'all'
       ? visibleProducts
       : activeCategory === 'offers'
-        ? visibleProducts.filter((p) => p.discount)
+        ? visibleProducts.filter((p) => p.discount && combos.some((c) => c.productIds.includes(p.id)))
         : visibleProducts.filter((p) => p.category === activeCategory);
 
   return (

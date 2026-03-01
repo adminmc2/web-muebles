@@ -183,6 +183,42 @@ h1, h2, h3, h4, h5, h6 {
   color: #F84C6B;
 }
 
+.hero-stat-link {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.hero-stat-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.hero-categories {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.hero-cat-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background: rgba(248, 76, 107, 0.2);
+  border: 1px solid rgba(248, 76, 107, 0.3);
+  padding: 0.35rem 0.7rem;
+  border-radius: 20px;
+}
+
+.hero-cat-pill svg {
+  color: #F84C6B;
+}
+
 .hero-cta {
   display: inline-flex;
   align-items: center;
