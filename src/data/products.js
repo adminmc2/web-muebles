@@ -1,4 +1,4 @@
-export const PHONE_NUMBER = 'TU_NUMERO_AQUI'; // Ej: 34612345678
+export const PHONE_NUMBER = '34637737861';
 
 export const products = [
   {

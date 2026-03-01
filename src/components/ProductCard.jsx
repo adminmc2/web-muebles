@@ -15,11 +15,9 @@ export default function ProductCard({ product }) {
 
   function handleWhatsApp(e) {
     e.stopPropagation();
-    if (!PHONE_NUMBER || PHONE_NUMBER.includes('TU_NUMERO')) {
-      alert('Configura tu número de teléfono en src/data/products.js');
-      return;
-    }
-    const text = `Hola, me interesa: ${name} (${price} €). ¿Sigue disponible?`;
+    const text = lang === 'en'
+      ? `Hi! I'm interested in: ${name_en} (${price} €). Is it still available?`
+      : `¡Hola! Me interesa el producto: ${name} (${price} €). ¿Sigue disponible?`;
     window.open(`https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(text)}`, '_blank');
   }
 

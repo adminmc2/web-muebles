@@ -21,11 +21,9 @@ export default function ProductModal({ product, displayImg, onClose }) {
   const isContextImg = displayImg !== product.img;
 
   function handleWhatsApp() {
-    if (!PHONE_NUMBER || PHONE_NUMBER.includes('TU_NUMERO')) {
-      alert('Configura tu número de teléfono en src/data/products.js');
-      return;
-    }
-    const text = `Hola, me interesa: ${product.name} (${product.price} €). ¿Sigue disponible?`;
+    const text = lang === 'en'
+      ? `Hi! I'm interested in: ${product.name_en} (${product.price} €). Is it still available?`
+      : `¡Hola! Me interesa el producto: ${product.name} (${product.price} €). ¿Sigue disponible?`;
     window.open(`https://wa.me/${PHONE_NUMBER}?text=${encodeURIComponent(text)}`, '_blank');
   }
 
