@@ -12,18 +12,19 @@ import Footer from './components/Footer';
 function Home() {
   const [activeCategory, setActiveCategory] = useState('all');
   const { t } = useLanguage();
-  const soldCount = products.filter((p) => p.sold).length;
+  const visibleProducts = products.filter((p) => !p.hidden);
+  const soldCount = visibleProducts.filter((p) => p.sold).length;
 
   const filtered =
     activeCategory === 'all'
-      ? products
+      ? visibleProducts
       : activeCategory === 'offers'
-        ? products.filter((p) => p.discount)
-        : products.filter((p) => p.category === activeCategory);
+        ? visibleProducts.filter((p) => p.discount)
+        : visibleProducts.filter((p) => p.category === activeCategory);
 
   return (
     <>
-      <Header totalProducts={products.length} soldCount={soldCount} />
+      <Header totalProducts={visibleProducts.length} soldCount={soldCount} />
       <CategoryBar active={activeCategory} onChange={setActiveCategory} />
       <main id="products">
         {activeCategory === 'offers' && (

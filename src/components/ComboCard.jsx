@@ -1,12 +1,13 @@
 import { useState } from 'react';
-import { TagIcon, PlusIcon } from '@phosphor-icons/react';
+import { TagIcon, PlusIcon, GiftIcon } from '@phosphor-icons/react';
 import { products } from '../data/products';
 import { useLanguage } from '../i18n';
 import ComboModal from './ComboModal';
 
 export default function ComboCard({ combo }) {
-  const { lang, t } = useLanguage();
+  const { lang } = useLanguage();
   const [showModal, setShowModal] = useState(false);
+  const giftIds = combo.giftProductIds || [];
 
   const comboProducts = combo.productIds.map((id) => products.find((p) => p.id === id)).filter(Boolean);
   const totalPrice = comboProducts.reduce((sum, p) => sum + p.price, 0);
@@ -18,22 +19,24 @@ export default function ComboCard({ combo }) {
     <>
       <div className="card combo-card" onClick={() => setShowModal(true)}>
         <div className="combo-imgs" style={{ backgroundColor: combo.bgColor || '#FFF0E0' }}>
-          <span className="badge badge-combo">
-            <TagIcon size={12} weight="bold" />
-            {t.comboLabel}
-          </span>
-          {comboProducts.map((p, i) => (
-            <div key={p.id} className="combo-img-wrap">
-              <div className="combo-img-item">
-                <img src={p.img} alt={lang === 'en' ? p.name_en : p.name} loading="lazy" />
-                <span className="combo-img-label">{lang === 'en' ? p.name_en : p.name}</span>
-                <span className="combo-img-label-price">{p.price} €</span>
+          {comboProducts.map((p, i) => {
+            const isGift = giftIds.includes(p.id);
+            return (
+              <div key={`${p.id}-${i}`} className="combo-img-wrap">
+                <div className="combo-img-item">
+                  <img src={p.img} alt={lang === 'en' ? p.name_en : p.name} loading="lazy" />
+                  <span className="combo-img-label">{lang === 'en' ? p.name_en : p.name}</span>
+                  {isGift
+                    ? <span className="combo-img-label-gift"><GiftIcon size={12} weight="bold" /> {lang === 'en' ? 'Free' : 'Regalo'}</span>
+                    : <span className="combo-img-label-price">{p.price} €</span>
+                  }
+                </div>
+                {i < comboProducts.length - 1 && (
+                  <span className="combo-plus"><PlusIcon size={14} weight="bold" /></span>
+                )}
               </div>
-              {i < comboProducts.length - 1 && (
-                <span className="combo-plus"><PlusIcon size={18} weight="bold" /></span>
-              )}
-            </div>
-          ))}
+            );
+          })}
         </div>
         <div className="card-body">
           <span className="combo-card-title-pill">{displayName}</span>

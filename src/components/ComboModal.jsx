@@ -1,10 +1,11 @@
 import { useEffect } from 'react';
-import { XIcon, WhatsappLogoIcon, PlusIcon } from '@phosphor-icons/react';
+import { XIcon, WhatsappLogoIcon, PlusIcon, GiftIcon } from '@phosphor-icons/react';
 import { products, PHONE_NUMBER } from '../data/products';
 import { useLanguage } from '../i18n';
 
 export default function ComboModal({ combo, onClose }) {
   const { lang, t } = useLanguage();
+  const giftIds = combo.giftProductIds || [];
 
   useEffect(() => {
     document.body.style.overflow = 'hidden';
@@ -40,14 +41,18 @@ export default function ComboModal({ combo, onClose }) {
         <div className="combo-modal-products">
           {comboProducts.map((p, i) => {
             const pName = lang === 'en' ? p.name_en : p.name;
+            const isGift = giftIds.includes(p.id);
             return (
-              <div key={p.id} className="combo-modal-product-wrap">
+              <div key={`${p.id}-${i}`} className="combo-modal-product-wrap">
                 <div className="combo-modal-product">
                   <div className="combo-modal-img">
                     <img src={p.img} alt={pName} />
                   </div>
                   <span className="combo-modal-product-label">{pName}</span>
-                  <span className="combo-modal-product-label-price">{p.price} €</span>
+                  {isGift
+                    ? <span className="combo-modal-product-label-gift"><GiftIcon size={12} weight="bold" /> {lang === 'en' ? 'Free' : 'Regalo'}</span>
+                    : <span className="combo-modal-product-label-price">{p.price} €</span>
+                  }
                 </div>
                 {i < comboProducts.length - 1 && (
                   <span className="combo-modal-plus"><PlusIcon size={24} weight="bold" /></span>

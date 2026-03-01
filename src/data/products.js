@@ -49,6 +49,21 @@ export const products = [
     discount: 10,
     sold: false,
   },
+  {
+    id: 3,
+    name: 'Jarrón decorativo',
+    name_en: 'Decorative Vase',
+    price: 0,
+    desc: 'Jarrón alto decorativo con ramas y piedras naturales. Elegante pieza de acento para cualquier estancia.',
+    desc_en: 'Tall decorative vase with natural branches and stones. Elegant accent piece for any room.',
+    img: '/img/jarron.png',
+    imgs: ['/img/jarron.png'],
+    bgColor: '#F0EDE6',
+    category: 'decor',
+    condition: 'used',
+    hidden: true,
+    sold: false,
+  },
 ];
 
 export const combos = [
@@ -61,5 +76,16 @@ export const combos = [
     productIds: [1, 2],
     comboPrice: 93,
     bgColor: '#FFF0E0',
+  },
+  {
+    id: 'combo-2',
+    name: '2× Chunky + Jarrón',
+    name_en: '2× Chunky + Vase',
+    desc: 'Dos mesitas Chunky ideales como pareja de mesitas de noche. Incluye jarrón decorativo de regalo.',
+    desc_en: 'Two Chunky nightstands, the perfect pair. Includes a free decorative vase.',
+    productIds: [2, 2, 3],
+    comboPrice: 100,
+    bgColor: '#E8E0D0',
+    giftProductIds: [3],
   },
 ];

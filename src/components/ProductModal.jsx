@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { X, WhatsappLogo, MapPin, Tag, SealPercentIcon, TagIcon, PlusIcon } from '@phosphor-icons/react';
+import { X, WhatsappLogo, MapPin, Tag, SealPercentIcon, TagIcon, PlusIcon, GiftIcon } from '@phosphor-icons/react';
 import { PHONE_NUMBER, products, combos } from '../data/products';
 import { useLanguage } from '../i18n';
 
@@ -121,6 +121,7 @@ export default function ProductModal({ product, displayImg, onClose, onOpenCombo
             {productCombos.length > 0 && (
               <div className="modal-combo-section">
                 {productCombos.map((combo) => {
+                  const giftIds = combo.giftProductIds || [];
                   const totalPrice = combo.productIds.reduce((sum, id) => {
                     const p = products.find((pr) => pr.id === id);
                     return sum + (p ? p.price : 0);
@@ -134,24 +135,30 @@ export default function ProductModal({ product, displayImg, onClose, onOpenCombo
                   return (
                     <div key={combo.id} className="modal-combo-card" onClick={() => onOpenCombo(combo)}>
                       <h4 className="modal-combo-title">
-                        <TagIcon size={14} weight="bold" />
+                        <TagIcon size={10} weight="bold" />
                         {lang === 'en' ? 'Special combo' : 'Combo especial'}
                       </h4>
                       <div className="modal-combo-products">
-                        {allComboProducts.map((cp, i) => (
-                          <div key={cp.id} className="modal-combo-product-wrap">
-                            <div className="modal-combo-product-item">
-                              <div className="modal-combo-img">
-                                <img src={cp.img} alt={lang === 'en' ? cp.name_en : cp.name} />
+                        {allComboProducts.map((cp, i) => {
+                          const isGift = giftIds.includes(cp.id);
+                          return (
+                            <div key={`${cp.id}-${i}`} className="modal-combo-product-wrap">
+                              <div className="modal-combo-product-item">
+                                <div className="modal-combo-img">
+                                  <img src={cp.img} alt={lang === 'en' ? cp.name_en : cp.name} />
+                                </div>
+                                <span className="modal-combo-label">{lang === 'en' ? cp.name_en : cp.name}</span>
+                                {isGift
+                                  ? <span className="modal-combo-label-gift"><GiftIcon size={9} weight="bold" /> {lang === 'en' ? 'Free' : 'Regalo'}</span>
+                                  : <span className="modal-combo-label-price">{cp.price} €</span>
+                                }
                               </div>
-                              <span className="modal-combo-label">{lang === 'en' ? cp.name_en : cp.name}</span>
-                              <span className="modal-combo-label-price">{cp.price} €</span>
+                              {i < allComboProducts.length - 1 && (
+                                <span className="modal-combo-plus"><PlusIcon size={12} weight="bold" /></span>
+                              )}
                             </div>
-                            {i < allComboProducts.length - 1 && (
-                              <span className="modal-combo-plus"><PlusIcon size={16} weight="bold" /></span>
-                            )}
-                          </div>
-                        ))}
+                          );
+                        })}
                         <span className="modal-combo-equals">=</span>
                         <div className="modal-combo-result">
                           <span className="modal-combo-price">{combo.comboPrice} €</span>
