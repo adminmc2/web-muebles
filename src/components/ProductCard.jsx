@@ -31,7 +31,7 @@ export default function ProductCard({ product }) {
             <Eye size={14} weight="bold" />
             {t.seeMore}
           </span>
-          <img src={img} alt={displayName} loading="lazy" style={product.imgScale ? { transform: `scale(${product.imgScale})` } : undefined} />
+          <img src={img} alt={displayName} loading="lazy" style={product.imgScale ? { transform: `scale(${product.imgScale})`, transformOrigin: product.imgPosition || 'center' } : undefined} />
           {sold && <span className="badge badge-sold">{t.statusSold}</span>}
         </div>
         {contextImg && (
