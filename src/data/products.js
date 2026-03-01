@@ -20,6 +20,7 @@ export const products = [
     usage_en: '8 months',
     includes: 'Foco LED',
     includes_en: 'LED bulb',
+    wallapopUrl: 'https://es.wallapop.com/item/lampara-de-mesa-dorada-y-blanca-1236186369',
     sold: false,
   },
 ];

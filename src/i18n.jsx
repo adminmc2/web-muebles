@@ -39,6 +39,9 @@ const translations = {
     conditionUsed: 'Usado',
     usageLabel: 'Uso',
     includesLabel: 'Incluye',
+    pickupDiscount: '11 % dto. recogida en persona',
+    locationZone: '28005 Madrid',
+    wallapop: 'Wallapop',
   },
   en: {
     heroLabel: 'Moving sale',
@@ -78,6 +81,9 @@ const translations = {
     conditionUsed: 'Used',
     usageLabel: 'Usage',
     includesLabel: 'Includes',
+    pickupDiscount: '11% off for in-person pickup',
+    locationZone: '28005 Madrid',
+    wallapop: 'Wallapop',
   },
 };
 
