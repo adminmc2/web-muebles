@@ -1,7 +1,8 @@
 [build]
-  publish = "/"
-  command = ""
+  command = "npm run build"
+  publish = "dist"
 
-[context.production.environment]
-  # VARIABLES DE EJEMPLO
-  # PHONE_NUMBER = "34123456789"
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
