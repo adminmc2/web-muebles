@@ -1,0 +1,7 @@
+[build]
+  publish = "/"
+  command = ""
+
+[context.production.environment]
+  # VARIABLES DE EJEMPLO
+  # PHONE_NUMBER = "34123456789"
