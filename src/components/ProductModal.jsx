@@ -57,10 +57,10 @@ export default function ProductModal({ product, displayImg, onClose }) {
               <MapPin size={14} weight="bold" />
               {t.locationZone}
             </a>
-            {!product.sold && (
+            {!product.sold && product.discount && (
               <span className="meta-item meta-discount">
                 <SealPercentIcon size={14} weight="bold" />
-                {t.pickupDiscount}
+                {lang === 'en' ? `${product.discount}% off for in-person pickup` : `${product.discount} % dto. recogida en persona`}
               </span>
             )}
           </div>
@@ -84,6 +84,12 @@ export default function ProductModal({ product, displayImg, onClose }) {
               <div className="card-spec">
                 <span className="card-spec-label">{t.usageLabel}</span>
                 <span className="card-spec-value">{lang === 'en' ? product.usage_en : product.usage}</span>
+              </div>
+            )}
+            {product.brand && (
+              <div className="card-spec">
+                <span className="card-spec-label">{t.brandLabel}</span>
+                <span className="card-spec-value">{product.brand}</span>
               </div>
             )}
             {product.includes && (
