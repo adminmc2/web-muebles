@@ -1,27 +1,43 @@
 import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { LanguageProvider } from './i18n';
-import { products } from './data/products';
+import { LanguageProvider, useLanguage } from './i18n';
+import { products, combos } from './data/products';
 import Header from './components/Header';
 import CategoryBar from './components/CategoryBar';
 import ProductCard from './components/ProductCard';
+import ComboCard from './components/ComboCard';
 import ProductDetail from './components/ProductDetail';
 import Footer from './components/Footer';
 
 function Home() {
   const [activeCategory, setActiveCategory] = useState('all');
+  const { t } = useLanguage();
   const soldCount = products.filter((p) => p.sold).length;
 
   const filtered =
     activeCategory === 'all'
       ? products
-      : products.filter((p) => p.category === activeCategory);
+      : activeCategory === 'offers'
+        ? products.filter((p) => p.discount)
+        : products.filter((p) => p.category === activeCategory);
 
   return (
     <>
       <Header totalProducts={products.length} soldCount={soldCount} />
       <CategoryBar active={activeCategory} onChange={setActiveCategory} />
       <main id="products">
+        {activeCategory === 'offers' && (
+          <>
+            <h2 className="offers-title">{t.offersTitle}</h2>
+            <h3 className="offers-subtitle">{t.offersCombos}</h3>
+            <section className="product-grid">
+              {combos.map((combo) => (
+                <ComboCard key={combo.id} combo={combo} />
+              ))}
+            </section>
+            <h3 className="offers-subtitle">{t.offersProducts}</h3>
+          </>
+        )}
         <section className="product-grid">
           {filtered.map((product) => (
             <ProductCard key={product.id} product={product} />

@@ -1,8 +1,9 @@
-import { SquaresFour, Chair, Lamp, Table, Couch, LampPendant } from '@phosphor-icons/react';
+import { SquaresFour, Chair, Lamp, Table, Couch, LampPendant, TagIcon } from '@phosphor-icons/react';
 import { useLanguage } from '../i18n';
 
 const categories = [
   { key: 'all', icon: SquaresFour, labelKey: 'catAll' },
+  { key: 'offers', icon: TagIcon, labelKey: 'catOffers' },
   { key: 'chairs', icon: Chair, labelKey: 'catChairs' },
   { key: 'tables', icon: Table, labelKey: 'catTables' },
   { key: 'lamp', icon: Lamp, labelKey: 'catLamp' },
@@ -19,6 +20,7 @@ export default function CategoryBar({ active, onChange }) {
           <button
             key={key}
             className={`category-item${active === key ? ' active' : ''}`}
+            data-cat={key}
             onClick={() => onChange(key)}
           >
             <div className="category-icon">

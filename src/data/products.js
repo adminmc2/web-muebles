@@ -50,3 +50,16 @@ export const products = [
     sold: false,
   },
 ];
+
+export const combos = [
+  {
+    id: 'combo-1',
+    name: 'Petit + Chunky',
+    name_en: 'Petit + Chunky',
+    desc: 'Lámpara Petit y Mesita Chunky juntas. El combo perfecto para tu mesita de noche.',
+    desc_en: 'Petit Lamp and Chunky Nightstand together. The perfect nightstand combo.',
+    productIds: [1, 2],
+    comboPrice: 93,
+    bgColor: '#FFF0E0',
+  },
+];

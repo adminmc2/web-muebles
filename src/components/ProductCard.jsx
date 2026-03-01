@@ -3,10 +3,12 @@ import { WhatsappLogo, Eye, ArrowRight, Tag } from '@phosphor-icons/react';
 import { PHONE_NUMBER } from '../data/products';
 import { useLanguage } from '../i18n';
 import ProductModal from './ProductModal';
+import ComboModal from './ComboModal';
 
 export default function ProductCard({ product }) {
   const { lang, t } = useLanguage();
   const [modalImg, setModalImg] = useState(null);
+  const [activeCombo, setActiveCombo] = useState(null);
   const { name, name_en, price, img, imgs, sold } = product;
   const contextImg = imgs && imgs.length > 1 ? imgs[1] : null;
 
@@ -88,7 +90,15 @@ export default function ProductCard({ product }) {
           </div>
         </div>
       </div>
-      {modalImg && <ProductModal product={product} displayImg={modalImg} onClose={() => setModalImg(null)} />}
+      {modalImg && (
+        <ProductModal
+          product={product}
+          displayImg={modalImg}
+          onClose={() => setModalImg(null)}
+          onOpenCombo={(combo) => { setModalImg(null); setActiveCombo(combo); }}
+        />
+      )}
+      {activeCombo && <ComboModal combo={activeCombo} onClose={() => setActiveCombo(null)} />}
     </>
   );
 }
