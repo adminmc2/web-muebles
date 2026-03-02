@@ -1703,6 +1703,14 @@ main {
     justify-content: center;
   }
 
+  .hero-categories {
+    justify-content: center;
+  }
+
+  .hero-stat div {
+    text-align: center;
+  }
+
   .hero-cta {
     justify-content: center;
   }
