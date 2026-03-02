@@ -1,4 +1,4 @@
-import { Tag, MapPin, ArrowDown, Globe, Armchair, Lamp, Table, Stack, CoatHanger, Fan, TShirt } from '@phosphor-icons/react';
+import { Tag, MapPin, ArrowDown, Globe, Armchair, Lamp, Table, Stack, CoatHanger, Fan, TShirt, Sneaker } from '@phosphor-icons/react';
 import { useLanguage } from '../i18n';
 
 const heroCategories = [
@@ -9,6 +9,7 @@ const heroCategories = [
   { icon: CoatHanger, labelKey: 'catCoatracks' },
   { icon: Fan, labelKey: 'catFans' },
   { icon: TShirt, labelKey: 'catGarmentCare' },
+  { icon: Sneaker, labelKey: 'catShoeCabinets' },
 ];
 
 export default function Header({ totalProducts, soldCount }) {
