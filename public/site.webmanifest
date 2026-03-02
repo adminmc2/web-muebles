@@ -1,0 +1,16 @@
+{
+  "name": "Furniture Finds Home | Designer furniture",
+  "short_name": "Furniture Finds",
+  "description": "Designer furniture from Kave Home, Sklum and Westwing in perfect condition. Available now.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#142535",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

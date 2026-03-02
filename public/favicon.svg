@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F84C6B"/>
+      <stop offset="100%" stop-color="#ff8a9b"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="96" fill="#142535"/>
+  <!-- M letter -->
+  <path d="M120 380V160l76 110 76-110v220" fill="none" stroke="url(#g)" stroke-width="36" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Sofa silhouette -->
+  <path d="M300 340c0-20 16-36 36-36h100c20 0 36 16 36 36v24c0 8-6 16-16 16H316c-10 0-16-8-16-16v-24z" fill="url(#g)" opacity="0.9"/>
+  <rect x="312" y="368" width="12" height="20" rx="4" fill="url(#g)" opacity="0.6"/>
+  <rect x="448" y="368" width="12" height="20" rx="4" fill="url(#g)" opacity="0.6"/>
+  <path d="M308 330c0-10 8-18 18-18h8v28h-18c-4 0-8-4-8-10z" fill="url(#g)" opacity="0.7"/>
+  <path d="M464 330c0-10-8-18-18-18h-8v28h18c4 0 8-4 8-10z" fill="url(#g)" opacity="0.7"/>
+</svg>
