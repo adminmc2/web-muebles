@@ -145,7 +145,7 @@ export const products = [
     includes: '2 percheros',
     includes_en: '2 coat racks',
     wallapopUrl: 'https://es.wallapop.com/item/2-sets-perchero-de-pie-de-madera-russ-1236255189',
-    sold: false,
+    sold: true,
   },
   {
     id: 6,
