@@ -1675,6 +1675,67 @@ main {
     overflow-y: visible;
     padding: 1.25rem 1.25rem 1.5rem;
   }
+
+  /* Combo modal responsive */
+  .combo-modal-products {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1.25rem 1rem;
+  }
+
+  .combo-modal-product-wrap {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .combo-modal-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .combo-modal-plus {
+    transform: rotate(90deg);
+  }
+
+  .combo-modal-body {
+    padding: 1rem;
+  }
+
+  .combo-modal-pricing {
+    justify-content: center;
+  }
+
+  /* Modal combo section responsive */
+  .modal-combo-products {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.2rem;
+  }
+
+  .modal-combo-img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .modal-combo-product-name {
+    font-size: 0.5rem;
+  }
+
+  .modal-combo-result {
+    font-size: 0.7rem;
+  }
+
+  /* Modal actions responsive */
+  .modal-actions {
+    flex-direction: column;
+  }
+
+  .modal-actions .btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.7rem 1rem;
+    min-height: 44px;
+  }
 }
 
 /* ========================================
@@ -1800,6 +1861,73 @@ main {
 
   .card-img-wrap img {
     height: 180px;
+  }
+
+  /* Card body responsive */
+  .card-body {
+    padding: 0.75rem 1rem 1rem;
+  }
+
+  .card-body .price {
+    font-size: 1.4rem;
+  }
+
+  .card-body .desc {
+    font-size: 0.82rem;
+  }
+
+  .card-spec {
+    font-size: 0.68rem;
+  }
+
+  .card-see-more {
+    opacity: 1;
+    font-size: 0.6rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  /* Card actions responsive */
+  .actions {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .actions .btn {
+    justify-content: center;
+    min-height: 44px;
+  }
+
+  /* Combo card responsive */
+  .combo-imgs {
+    padding: 1rem 0.5rem;
+    gap: 0.2rem;
+  }
+
+  .combo-img-item img {
+    width: 65px;
+    height: 65px;
+  }
+
+  .combo-img-label,
+  .combo-img-label-price,
+  .combo-img-label-gift {
+    font-size: 0.5rem;
+    padding: 0.15rem 0.3rem;
+  }
+
+  .combo-plus svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .badge-combo {
+    font-size: 0.6rem;
+    padding: 0.15rem 0.45rem;
+  }
+
+  /* Offers section responsive */
+  .offers-title {
+    font-size: 1.25rem;
   }
 
   .detail-img-wrap img {
