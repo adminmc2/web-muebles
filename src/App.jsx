@@ -15,12 +15,13 @@ function Home() {
   const visibleProducts = products.filter((p) => !p.hidden);
   const soldCount = visibleProducts.filter((p) => p.sold).length;
 
-  const filtered =
+  const filtered = (
     activeCategory === 'all'
       ? visibleProducts
       : activeCategory === 'offers'
         ? visibleProducts.filter((p) => p.discount && combos.some((c) => c.productIds.includes(p.id)))
-        : visibleProducts.filter((p) => p.category === activeCategory);
+        : visibleProducts.filter((p) => p.category === activeCategory)
+  ).sort((a, b) => a.sold - b.sold);
 
   return (
     <>

@@ -10,7 +10,7 @@ export default function ProductCard({ product }) {
   const [modalImg, setModalImg] = useState(null);
   const [activeCombo, setActiveCombo] = useState(null);
   const { name, name_en, price, img, imgs, sold } = product;
-  const contextImg = imgs && imgs.length > 1 ? imgs[1] : null;
+  const contextImg = product.contextImg || (imgs && imgs.length > 1 ? imgs[1] : null);
 
   const displayName = lang === 'en' ? name_en : name;
   const displayDesc = lang === 'en' ? product.desc_en : product.desc;
