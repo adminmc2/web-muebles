@@ -1,21 +1,25 @@
-import { Phone } from '@phosphor-icons/react';
-import { PHONE_NUMBER } from '../data/products';
 import { useLanguage } from '../i18n';
 
 export default function Footer() {
   const { t } = useLanguage();
-  const hasPhone = PHONE_NUMBER && !PHONE_NUMBER.includes('TU_NUMERO');
 
   return (
     <footer className="site-footer">
-      {hasPhone ? (
-        <p>
-          <Phone size={16} weight="bold" />
-          {t.footerContact}: <strong>+{PHONE_NUMBER}</strong>
-        </p>
-      ) : (
-        <p>{t.footerDefault}</p>
-      )}
+      <div className="footer-top">
+        <div className="footer-brand">
+          <p className="footer-title">{t.heroTitle1} <span>{t.heroTitle2}</span></p>
+          <p className="footer-subtitle">{t.heroSubtitle}</p>
+        </div>
+        <a
+          href="https://es.wallapop.com/user/armandoc-113523109"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="footer-link-card"
+        >
+          <img src="/img/wallapop.svg" alt="" width="18" height="18" />
+          <span>{t.footerWallapop}</span>
+        </a>
+      </div>
     </footer>
   );
 }

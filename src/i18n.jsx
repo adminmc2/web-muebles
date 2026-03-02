@@ -2,10 +2,10 @@ import { createContext, useContext, useState, useCallback } from 'react';
 
 const translations = {
   es: {
-    heroLabel: 'Venta por mudanza',
-    heroTitle1: 'Tus futuros',
-    heroTitle2: 'muebles',
-    heroSubtitle: 'Me mudo y no me llevo nada. Muebles en buen estado a precios muy reducidos.',
+    heroLabel: 'Moving sale',
+    heroTitle1: 'Segundo hogar,',
+    heroTitle2: 'mismo diseño',
+    heroSubtitle: 'Muebles de Kave Home, Sklum y Westwing en perfecto estado.',
     available: 'disponibles',
     sold: 'vendidos',
     pickup: 'recogida',
@@ -23,6 +23,7 @@ const translations = {
     backToList: 'Volver al listado',
     footerContact: 'Contacto directo',
     footerDefault: 'Contacto por WhatsApp en cada producto',
+    footerWallapop: 'Ver perfil en Wallapop',
     catAll: 'Todos',
     catOffers: 'Ofertas',
     catSofa: 'Sofás',
@@ -57,9 +58,9 @@ const translations = {
   },
   en: {
     heroLabel: 'Moving sale',
-    heroTitle1: 'Your future',
-    heroTitle2: 'furniture',
-    heroSubtitle: "I'm moving and taking nothing with me. Quality furniture at very reduced prices.",
+    heroTitle1: 'Second home,',
+    heroTitle2: 'same design',
+    heroSubtitle: 'Furniture from Kave Home, Sklum and Westwing in perfect condition.',
     available: 'available',
     sold: 'sold',
     pickup: 'pickup',
@@ -77,6 +78,7 @@ const translations = {
     backToList: 'Back to listing',
     footerContact: 'Direct contact',
     footerDefault: 'Contact via WhatsApp on each product',
+    footerWallapop: 'View profile on Wallapop',
     catAll: 'All',
     catOffers: 'Offers',
     catSofa: 'Sofas',
