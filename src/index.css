@@ -1706,23 +1706,46 @@ main {
   }
 
   /* Modal combo section responsive */
+  .modal-combo-card {
+    padding: 0.4rem;
+  }
+
   .modal-combo-products {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0.2rem;
+    gap: 0.15rem;
+  }
+
+  .modal-combo-product-wrap {
+    gap: 0.15rem;
   }
 
   .modal-combo-img {
-    width: 36px;
-    height: 36px;
+    width: 32px;
+    height: 32px;
   }
 
-  .modal-combo-product-name {
-    font-size: 0.5rem;
+  .modal-combo-label,
+  .modal-combo-label-price,
+  .modal-combo-label-gift {
+    font-size: 0.4rem;
+    padding: 0.08rem 0.2rem;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  .modal-combo-plus svg {
+    width: 8px;
+    height: 8px;
+  }
+
+  .modal-combo-equals {
+    font-size: 0.7rem;
   }
 
   .modal-combo-result {
-    font-size: 0.7rem;
+    font-size: 0.65rem;
   }
 
   /* Modal actions responsive */
@@ -1900,24 +1923,33 @@ main {
   /* Combo card responsive */
   .combo-imgs {
     padding: 1rem 0.5rem;
-    gap: 0.2rem;
+    gap: 0.15rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .combo-img-wrap {
+    gap: 0.15rem;
   }
 
   .combo-img-item img {
-    width: 65px;
-    height: 65px;
+    width: 55px;
+    height: 55px;
   }
 
   .combo-img-label,
   .combo-img-label-price,
   .combo-img-label-gift {
-    font-size: 0.5rem;
-    padding: 0.15rem 0.3rem;
+    font-size: 0.45rem;
+    padding: 0.1rem 0.25rem;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.2;
   }
 
   .combo-plus svg {
-    width: 14px;
-    height: 14px;
+    width: 12px;
+    height: 12px;
   }
 
   .badge-combo {

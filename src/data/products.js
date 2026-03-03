@@ -374,6 +374,21 @@ export const products = [
     hidden: true,
     sold: false,
   },
+  {
+    id: 17,
+    name: 'Marco de fotos verde',
+    name_en: 'Green Photo Frame',
+    price: 0,
+    desc: 'Marco de fotos decorativo en color verde. Regalo incluido con las mesas Glenda.',
+    desc_en: 'Decorative green photo frame. Free gift included with the Glenda tables.',
+    img: '/img/marcofoto.png',
+    imgs: ['/img/marcofoto.png'],
+    bgColor: '#E8E4D4',
+    category: 'decor',
+    condition: 'new',
+    hidden: true,
+    sold: false,
+  },
 ];
 
 export const combos = [
@@ -408,5 +423,16 @@ export const combos = [
     comboPrice: 220,
     bgColor: '#F0ECE5',
     giftProductIds: [6],
+  },
+  {
+    id: 'combo-4',
+    name: 'Glenda Centro + Glenda Alta + Marco',
+    name_en: 'Glenda Coffee + Glenda Tall + Frame',
+    desc: 'Las dos mesas Glenda de teca reciclada juntas. Incluye marco de fotos verde de regalo. Ahorra un 8%.',
+    desc_en: 'Both recycled teak Glenda tables together. Includes a free green photo frame. Save 8%.',
+    productIds: [15, 16, 17],
+    comboPrice: 124,
+    bgColor: '#E8E4D4',
+    giftProductIds: [17],
   },
 ];
