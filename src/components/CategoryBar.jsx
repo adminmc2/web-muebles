@@ -1,4 +1,4 @@
-import { SquaresFour, Armchair, Lamp, Table, Stack, CoatHanger, Fan, TShirt, Sneaker, TagIcon } from '@phosphor-icons/react';
+import { SquaresFour, Armchair, Lamp, Table, Stack, CoatHanger, Fan, TShirt, Sneaker, Stool, TagIcon } from '@phosphor-icons/react';
 import { useLanguage } from '../i18n';
 
 const categories = [
@@ -12,6 +12,7 @@ const categories = [
   { key: 'fans', icon: Fan, labelKey: 'catFans' },
   { key: 'garmentcare', icon: TShirt, labelKey: 'catGarmentCare' },
   { key: 'shoecabinets', icon: Sneaker, labelKey: 'catShoeCabinets' },
+  { key: 'pufs', icon: Stool, labelKey: 'catPufs' },
 ];
 
 export default function CategoryBar({ active, onChange }) {
