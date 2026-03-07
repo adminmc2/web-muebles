@@ -91,10 +91,17 @@ export default function ProductCard({ product }) {
                 <span className="card-spec-value">{lang === 'en' ? product.usage_en : product.usage}</span>
               </div>
             )}
-            {product.includes && (
+            {product.includes && product.includes !== '-' && (
               <div className="card-spec">
                 <span className="card-spec-label">{t.includesLabel}</span>
-                <span className="card-spec-value">{lang === 'en' ? product.includes_en : product.includes}</span>
+                <span className="card-spec-value">
+                  {(() => {
+                    const val = lang === 'en' ? product.includes_en : product.includes;
+                    const parts = val.split(' · ');
+                    if (parts.length <= 2) return val;
+                    return parts.map((p, i) => <span key={i} className="includes-item">{p}</span>);
+                  })()}
+                </span>
               </div>
             )}
           </div>

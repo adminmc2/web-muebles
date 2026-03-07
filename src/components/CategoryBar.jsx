@@ -1,4 +1,4 @@
-import { SquaresFour, Armchair, Lamp, Table, Stack, CoatHanger, Fan, TShirt, Sneaker, Stool, Couch, CookingPot, Chair, Monitor, Television, Lockers, TagIcon } from '@phosphor-icons/react';
+import { SquaresFour, Armchair, Lamp, Table, Stack, CoatHanger, Fan, TShirt, Sneaker, Stool, Couch, CookingPot, Chair, Monitor, Television, Lockers, ForkKnife, Rug, TagIcon } from '@phosphor-icons/react';
 import { useLanguage } from '../i18n';
 
 const categories = [
@@ -15,10 +15,12 @@ const categories = [
   { key: 'pufs', icon: Stool, labelKey: 'catPufs' },
   { key: 'sofas', icon: Couch, labelKey: 'catSofas' },
   { key: 'kitchen', icon: CookingPot, labelKey: 'catKitchen' },
+  { key: 'dining', icon: ForkKnife, labelKey: 'catDining' },
   { key: 'chairs', icon: Chair, labelKey: 'catChairs' },
   { key: 'tv', icon: Monitor, labelKey: 'catTv' },
   { key: 'television', icon: Television, labelKey: 'catTelevision' },
   { key: 'storage', icon: Lockers, labelKey: 'catStorage' },
+  { key: 'rugs', icon: Rug, labelKey: 'catRugs' },
 ];
 
 export default function CategoryBar({ active, onChange }) {

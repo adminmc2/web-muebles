@@ -673,6 +673,11 @@ main {
   text-align: right;
 }
 
+.includes-item {
+  display: block;
+  line-height: 1.5;
+}
+
 /* ========================================
    BUTTONS
    ======================================== */
