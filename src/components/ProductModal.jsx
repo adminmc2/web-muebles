@@ -38,10 +38,32 @@ export default function ProductModal({ product, displayImg, onClose, onOpenCombo
           </button>
 
           <div className="modal-left">
-            <div className={`modal-img-wrap${isContextImg ? ' modal-img-context' : ''}${product.category === 'sofas' ? ' modal-img-large' : ''}`} style={isContextImg ? {} : { backgroundColor: product.bgColor || '#F6F8FB' }}>
-              <img src={displayImg} alt={displayName} />
-              {product.sold && <span className="badge badge-sold">{t.statusSold}</span>}
-            </div>
+            {product.bundleItems ? (
+              <div className="combo-modal-products" style={{ backgroundColor: product.bgColor || '#F6F8FB' }}>
+                {product.bundleItems.map((item, i) => (
+                  <div key={i} className="combo-modal-product-wrap">
+                    <div className="combo-modal-product">
+                      <div className="combo-modal-img">
+                        <img src={item.img} alt={lang === 'en' ? item.name_en : item.name} />
+                      </div>
+                      <span className="combo-modal-product-label">{lang === 'en' ? item.name_en : item.name}</span>
+                      {item.gift && (
+                        <span className="combo-modal-product-label-gift"><GiftIcon size={12} weight="bold" /> {lang === 'en' ? 'Free' : 'Regalo'}</span>
+                      )}
+                    </div>
+                    {i < product.bundleItems.length - 1 && (
+                      <span className="combo-modal-plus"><PlusIcon size={24} weight="bold" /></span>
+                    )}
+                  </div>
+                ))}
+                {product.sold && <span className="badge badge-sold">{t.statusSold}</span>}
+              </div>
+            ) : (
+              <div className={`modal-img-wrap${isContextImg ? ' modal-img-context' : ''}${product.category === 'sofas' ? ' modal-img-large' : ''}`} style={isContextImg ? {} : { backgroundColor: product.bgColor || '#F6F8FB' }}>
+                <img src={displayImg} alt={displayName} />
+                {product.sold && <span className="badge badge-sold">{t.statusSold}</span>}
+              </div>
+            )}
           </div>
 
           <div className="modal-body">
@@ -50,6 +72,9 @@ export default function ProductModal({ product, displayImg, onClose, onOpenCombo
               <Tag size={20} weight="fill" />{product.price} €
               {product.originalPrice && <span className="price-original">{product.originalPrice} €</span>}
             </p>
+            {product.unitPrice && (
+              <p className="unit-price">{t.unitPriceLabel}: {product.unitPrice} €{t.unitPriceSuffix}</p>
+            )}
 
             <div className="modal-meta">
               <span className="meta-item">

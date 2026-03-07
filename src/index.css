@@ -624,6 +624,13 @@ main {
   margin-left: 0.2rem;
 }
 
+.unit-price {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #25D366;
+  margin-top: 0.15rem;
+}
+
 .card-body .desc {
   font-size: 0.88rem;
   color: #4A5F73;
@@ -1751,6 +1758,48 @@ main {
     font-size: 0.65rem;
   }
 
+  /* Bundle in modal responsive (700px) */
+  .modal-left .combo-modal-products {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 1rem 0.75rem;
+    border-radius: 16px 16px 0 0;
+  }
+
+  .modal-left .combo-modal-product-wrap {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+
+  .modal-left .combo-modal-img {
+    width: 70px;
+    height: 70px;
+  }
+
+  .modal-left .combo-modal-product-label {
+    font-size: 0.55rem;
+  }
+
+  .modal-left .combo-modal-product-label-gift {
+    font-size: 0.55rem;
+  }
+
+  .modal-left .combo-modal-plus {
+    transform: none;
+  }
+
+  .modal-left .combo-modal-plus svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* Sofa modal image responsive */
+  .modal-img-large img {
+    max-height: 280px;
+  }
+
   /* Modal actions responsive */
   .modal-actions {
     flex-direction: column;
@@ -1823,6 +1872,22 @@ main {
     background: linear-gradient(to top, #142535, transparent);
     z-index: 1;
     pointer-events: none;
+  }
+
+  /* Tablet: combo and bundle images */
+  .combo-imgs {
+    gap: 0.2rem;
+  }
+
+  .combo-img-item img {
+    width: 75px;
+    height: 75px;
+  }
+
+  .combo-img-label,
+  .combo-img-label-price,
+  .combo-img-label-gift {
+    font-size: 0.55rem;
   }
 }
 
@@ -1956,6 +2021,16 @@ main {
   .badge-combo {
     font-size: 0.6rem;
     padding: 0.15rem 0.45rem;
+  }
+
+  /* Bundle card responsive (600px) */
+  .combo-img-item {
+    max-width: 70px;
+  }
+
+  /* Sofa card image responsive */
+  .modal-img-large img {
+    max-height: 220px;
   }
 
   /* Offers section responsive */

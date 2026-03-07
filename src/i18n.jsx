@@ -41,6 +41,7 @@ const translations = {
     catShoeCabinets: 'Zapateros',
     catPufs: 'Pufs',
     catSofas: 'Sofás',
+    catKitchen: 'Cocina',
     catAccessories: 'Accesorios',
     getSpecialPrice: 'Consigue precio especial',
     priceNegotiable: 'Precio negociable',
@@ -61,6 +62,8 @@ const translations = {
     offersTitle: 'Ofertas especiales',
     offersCombos: 'Combos',
     offersProducts: 'Productos con descuento',
+    unitPriceLabel: 'También por separado',
+    unitPriceSuffix: '/ud.',
   },
   en: {
     heroLabel: 'Moving sale',
@@ -102,6 +105,7 @@ const translations = {
     catShoeCabinets: 'Shoe cabinets',
     catPufs: 'Poufs',
     catSofas: 'Sofas',
+    catKitchen: 'Kitchen',
     catAccessories: 'Accessories',
     getSpecialPrice: 'Get special price',
     priceNegotiable: 'Price negotiable',
@@ -122,6 +126,8 @@ const translations = {
     offersTitle: 'Special offers',
     offersCombos: 'Combos',
     offersProducts: 'Products with discount',
+    unitPriceLabel: 'Also sold separately',
+    unitPriceSuffix: ' each',
   },
 };
 

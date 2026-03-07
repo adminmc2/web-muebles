@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { WhatsappLogo, Eye, ArrowRight, Tag } from '@phosphor-icons/react';
+import { WhatsappLogo, Eye, ArrowRight, Tag, PlusIcon, GiftIcon } from '@phosphor-icons/react';
 import { PHONE_NUMBER } from '../data/products';
 import { useLanguage } from '../i18n';
 import ProductModal from './ProductModal';
@@ -26,15 +26,36 @@ export default function ProductCard({ product }) {
   return (
     <>
       <div className={`card${sold ? ' sold' : ''}`} onClick={() => setModalImg(img)}>
-        <div className="card-img-wrap" style={{ backgroundColor: product.bgColor || '#F6F8FB' }}>
-          <span className="card-see-more">
-            <Eye size={14} weight="bold" />
-            {t.seeMore}
-          </span>
-          <img src={img} alt={displayName} loading="lazy" style={product.imgScale ? { transform: `scale(${product.imgScale})`, transformOrigin: product.imgPosition || 'center' } : undefined} />
-          {sold && <span className="badge badge-sold">{t.statusSold}</span>}
-        </div>
-        {contextImg && (
+        {product.bundleItems ? (
+          <div className="combo-imgs" style={{ backgroundColor: product.bgColor || '#F6F8FB', borderRadius: '12px 12px 0 0' }}>
+            {product.bundleItems.map((item, i) => (
+              <div key={i} className="combo-img-wrap">
+                <div className="combo-img-item">
+                  <img src={item.img} alt={lang === 'en' ? item.name_en : item.name} loading="lazy" />
+                  <span className="combo-img-label">{lang === 'en' ? item.name_en : item.name}</span>
+                  {item.gift
+                    ? <span className="combo-img-label-gift"><GiftIcon size={12} weight="bold" /> {lang === 'en' ? 'Free' : 'Regalo'}</span>
+                    : null
+                  }
+                </div>
+                {i < product.bundleItems.length - 1 && (
+                  <span className="combo-plus"><PlusIcon size={14} weight="bold" /></span>
+                )}
+              </div>
+            ))}
+            {sold && <span className="badge badge-sold">{t.statusSold}</span>}
+          </div>
+        ) : (
+          <div className="card-img-wrap" style={{ backgroundColor: product.bgColor || '#F6F8FB' }}>
+            <span className="card-see-more">
+              <Eye size={14} weight="bold" />
+              {t.seeMore}
+            </span>
+            <img src={img} alt={displayName} loading="lazy" style={product.imgScale ? { transform: `scale(${product.imgScale})`, transformOrigin: product.imgPosition || 'center' } : undefined} />
+            {sold && <span className="badge badge-sold">{t.statusSold}</span>}
+          </div>
+        )}
+        {!product.bundleItems && contextImg && (
           <div className="card-context-hint" onClick={(e) => { e.stopPropagation(); setModalImg(contextImg); }} style={{ background: `linear-gradient(to bottom, ${product.bgColor || '#F6F8FB'}, #fff)` }}>
             <span className="card-context-hint-text">{t.seeItLive}</span>
             <ArrowRight size={14} weight="bold" className="card-context-arrow" />
@@ -47,6 +68,9 @@ export default function ProductCard({ product }) {
             <Tag size={18} weight="fill" />{price} €
             {product.originalPrice && <span className="price-original">{product.originalPrice} €</span>}
           </p>
+          {product.unitPrice && (
+            <p className="unit-price">{t.unitPriceLabel}: {product.unitPrice} €{t.unitPriceSuffix}</p>
+          )}
           <p className="desc">{displayDesc}</p>
           <div className="card-specs">
             {product.dimensions && (
