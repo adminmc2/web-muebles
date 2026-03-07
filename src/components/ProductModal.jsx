@@ -80,7 +80,7 @@ export default function ProductModal({ product, displayImg, onClose, onOpenCombo
               {product.condition && (
                 <div className="card-spec">
                   <span className="card-spec-label">{t.conditionLabel}</span>
-                  <span className="card-spec-value">{product.condition === 'new' ? t.conditionNew : t.conditionUsed}</span>
+                  <span className="card-spec-value">{product.condition === 'new' ? t.conditionNew : product.condition === 'good' ? t.conditionGood : t.conditionUsed}</span>
                 </div>
               )}
               {product.usage && (
