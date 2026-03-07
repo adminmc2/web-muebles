@@ -38,7 +38,7 @@ export default function ProductModal({ product, displayImg, onClose, onOpenCombo
           </button>
 
           <div className="modal-left">
-            <div className={`modal-img-wrap${isContextImg ? ' modal-img-context' : ''}`} style={isContextImg ? {} : { backgroundColor: product.bgColor || '#F6F8FB' }}>
+            <div className={`modal-img-wrap${isContextImg ? ' modal-img-context' : ''}${product.category === 'sofas' ? ' modal-img-large' : ''}`} style={isContextImg ? {} : { backgroundColor: product.bgColor || '#F6F8FB' }}>
               <img src={displayImg} alt={displayName} />
               {product.sold && <span className="badge badge-sold">{t.statusSold}</span>}
             </div>
