@@ -1,4 +1,4 @@
-import { Tag, MapPin, ArrowDown, Globe, Armchair, Lamp, Table, Stack, CoatHanger, Fan, TShirt, Sneaker, Stool, Couch, CookingPot, Chair } from '@phosphor-icons/react';
+import { Tag, MapPin, ArrowDown, Globe, Armchair, Lamp, Table, Stack, CoatHanger, Fan, TShirt, Sneaker, Stool, Couch, CookingPot, Chair, Monitor, Television, Lockers } from '@phosphor-icons/react';
 import { useLanguage } from '../i18n';
 
 const heroCategories = [
@@ -14,6 +14,9 @@ const heroCategories = [
   { icon: Couch, labelKey: 'catSofas' },
   { icon: CookingPot, labelKey: 'catKitchen' },
   { icon: Chair, labelKey: 'catChairs' },
+  { icon: Monitor, labelKey: 'catTv' },
+  { icon: Television, labelKey: 'catTelevision' },
+  { icon: Lockers, labelKey: 'catStorage' },
 ];
 
 export default function Header({ totalProducts, soldCount }) {
