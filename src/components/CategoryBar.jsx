@@ -1,4 +1,4 @@
-import { SquaresFour, Armchair, Lamp, Table, Stack, CoatHanger, Fan, TShirt, Sneaker, Stool, Couch, CookingPot, Chair, Monitor, Television, Lockers, ForkKnife, Rug, Robot, Plug, TagIcon } from '@phosphor-icons/react';
+import { SquaresFour, Armchair, Lamp, Table, Stack, Fan, Sneaker, Stool, Couch, CookingPot, Chair, Lockers, Rug, Robot, FlowerLotusIcon, SpeakerHifiIcon, BathtubIcon, MoonStarsIcon, WineIcon, Plug, TagIcon } from '@phosphor-icons/react';
 import { useLanguage } from '../i18n';
 
 const categories = [
@@ -8,20 +8,20 @@ const categories = [
   { key: 'tables', icon: Table, labelKey: 'catTables' },
   { key: 'lamp', icon: Lamp, labelKey: 'catLamp' },
   { key: 'shelves', icon: Stack, labelKey: 'catShelves' },
-  { key: 'coatracks', icon: CoatHanger, labelKey: 'catCoatracks' },
   { key: 'fans', icon: Fan, labelKey: 'catFans' },
-  { key: 'garmentcare', icon: TShirt, labelKey: 'catGarmentCare' },
   { key: 'shoecabinets', icon: Sneaker, labelKey: 'catShoeCabinets' },
   { key: 'pufs', icon: Stool, labelKey: 'catPufs' },
   { key: 'sofas', icon: Couch, labelKey: 'catSofas' },
   { key: 'kitchen', icon: CookingPot, labelKey: 'catKitchen' },
-  { key: 'dining', icon: ForkKnife, labelKey: 'catDining' },
   { key: 'chairs', icon: Chair, labelKey: 'catChairs' },
-  { key: 'tv', icon: Monitor, labelKey: 'catTv' },
-  { key: 'television', icon: Television, labelKey: 'catTelevision' },
   { key: 'storage', icon: Lockers, labelKey: 'catStorage' },
   { key: 'rugs', icon: Rug, labelKey: 'catRugs' },
   { key: 'appliances', icon: Robot, labelKey: 'catAppliances' },
+  { key: 'decor', icon: FlowerLotusIcon, labelKey: 'catDecor' },
+  { key: 'speakers', icon: SpeakerHifiIcon, labelKey: 'catSpeakers' },
+  { key: 'bathroom', icon: BathtubIcon, labelKey: 'catBathroom' },
+  { key: 'bedroom', icon: MoonStarsIcon, labelKey: 'catBedroom' },
+  { key: 'drinks', icon: WineIcon, labelKey: 'catDrinks' },
   { key: 'accessories', icon: Plug, labelKey: 'catAccessories' },
 ];
 

@@ -1,4 +1,4 @@
-import { Tag, MapPin, ArrowDown, Globe, Armchair, Lamp, Table, Stack, CoatHanger, Fan, TShirt, Sneaker, Stool, Couch, CookingPot, Chair, Monitor, Television, Lockers, ForkKnife, Rug, Robot, Plug } from '@phosphor-icons/react';
+import { Tag, MapPin, ArrowDown, Globe, Armchair, Lamp, Table, Stack, CoatHanger, Fan, TShirt, Sneaker, Stool, Couch, CookingPot, Chair, Monitor, Television, Lockers, ForkKnife, Rug, Robot, FlowerLotusIcon, SpeakerHifiIcon, BathtubIcon, MoonStarsIcon, WineIcon, Plug } from '@phosphor-icons/react';
 import { useLanguage } from '../i18n';
 
 const heroCategories = [
@@ -20,6 +20,11 @@ const heroCategories = [
   { icon: Lockers, labelKey: 'catStorage' },
   { icon: Rug, labelKey: 'catRugs' },
   { icon: Robot, labelKey: 'catAppliances' },
+  { icon: FlowerLotusIcon, labelKey: 'catDecor' },
+  { icon: SpeakerHifiIcon, labelKey: 'catSpeakers' },
+  { icon: BathtubIcon, labelKey: 'catBathroom' },
+  { icon: MoonStarsIcon, labelKey: 'catBedroom' },
+  { icon: WineIcon, labelKey: 'catDrinks' },
   { icon: Plug, labelKey: 'catAccessories' },
 ];
 
