@@ -1,10 +1,21 @@
 import { useEffect } from 'react';
-import { X, WhatsappLogo, MapPin, Tag, SealPercentIcon, TagIcon, PlusIcon, GiftIcon } from '@phosphor-icons/react';
+import { useState } from 'react';
+import { X, WhatsappLogo, MapPin, Tag, SealPercentIcon, TagIcon, PlusIcon, GiftIcon, LinkSimpleIcon, CheckIcon } from '@phosphor-icons/react';
 import { PHONE_NUMBER, products, combos } from '../data/products';
 import { useLanguage } from '../i18n';
 
 export default function ProductModal({ product, displayImg, onClose, onOpenCombo }) {
   const { lang, t } = useLanguage();
+  const [copied, setCopied] = useState(false);
+
+  function handleShare(e) {
+    e.stopPropagation();
+    const url = `${window.location.origin}/producto/${product.id}`;
+    navigator.clipboard.writeText(url).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    });
+  }
 
   useEffect(() => {
     document.body.style.overflow = 'hidden';
@@ -148,6 +159,10 @@ export default function ProductModal({ product, displayImg, onClose, onOpenCombo
                   {t.wallapop}
                 </a>
               )}
+              <button className="btn btn-share modal-wa-btn" onClick={handleShare}>
+                {copied ? <CheckIcon size={20} weight="bold" /> : <LinkSimpleIcon size={20} weight="bold" />}
+                {copied ? t.linkCopied : t.shareLink}
+              </button>
             </div>
 
             {productCombos.length > 0 && (
