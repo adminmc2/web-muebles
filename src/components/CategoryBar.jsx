@@ -1,4 +1,4 @@
-import { SquaresFour, Armchair, Lamp, Table, Stack, Fan, Sneaker, Stool, Couch, CookingPot, Chair, Lockers, Rug, Robot, FlowerLotusIcon, SpeakerHifiIcon, BathtubIcon, MoonStarsIcon, WineIcon, Plug, TagIcon } from '@phosphor-icons/react';
+import { SquaresFour, Armchair, Lamp, Table, Stack, Fan, Stool, Couch, CookingPot, Chair, Lockers, Rug, Robot, FlowerLotusIcon, SpeakerHifiIcon, BathtubIcon, MoonStarsIcon, WineIcon, Plug, TagIcon } from '@phosphor-icons/react';
 import { useLanguage } from '../i18n';
 
 const categories = [
@@ -9,7 +9,6 @@ const categories = [
   { key: 'lamp', icon: Lamp, labelKey: 'catLamp' },
   { key: 'shelves', icon: Stack, labelKey: 'catShelves' },
   { key: 'fans', icon: Fan, labelKey: 'catFans' },
-  { key: 'shoecabinets', icon: Sneaker, labelKey: 'catShoeCabinets' },
   { key: 'pufs', icon: Stool, labelKey: 'catPufs' },
   { key: 'sofas', icon: Couch, labelKey: 'catSofas' },
   { key: 'kitchen', icon: CookingPot, labelKey: 'catKitchen' },
