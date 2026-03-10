@@ -655,7 +655,7 @@ export const products = [
     includes: '-',
     includes_en: '-',
     wallapopUrl: 'https://es.wallapop.com/item/cajonera-lino-beige-40cm-1238590857',
-    sold: false,
+    sold: true,
   },
   {
     id: 31,
@@ -751,7 +751,7 @@ export const products = [
     includes: '-',
     includes_en: '-',
     wallapopUrl: 'https://es.wallapop.com/item/alfombra-pelo-largo-whisper-beige-160x230-1238639110',
-    sold: false,
+    sold: true,
   },
   {
     id: 35,
@@ -891,7 +891,7 @@ export const products = [
     includes: 'Regleta 5 tomas · 4 USB · Cable 1,5 m',
     includes_en: '5-outlet strip · 4 USB · 1.5 m cable',
     wallapopUrl: 'https://es.wallapop.com/item/caja-organizadora-regleta-5-tomas-usb-1238654695',
-    sold: false,
+    sold: true,
   },
   {
     id: 41,
@@ -1011,7 +1011,7 @@ export const products = [
     includes: '-',
     includes_en: '-',
     wallapopUrl: 'https://es.wallapop.com/item/apple-homepod-2-gen-medianoche-1239041748',
-    sold: false,
+    sold: true,
   },
   {
     id: 46,
@@ -1107,7 +1107,7 @@ export const products = [
     includes: 'Mortero · Maja · Protector de madera',
     includes_en: 'Mortar · Pestle · Wooden protector',
     wallapopUrl: 'https://es.wallapop.com/item/mortero-y-maja-granito-praknu-1239060459',
-    sold: false,
+    sold: true,
   },
   {
     id: 50,
@@ -1228,7 +1228,7 @@ export const products = [
     includes: '4 cestas',
     includes_en: '4 baskets',
     wallapopUrl: 'https://es.wallapop.com/item/estanteria-ducha-telescopica-kindrino-4-cestas-1239073364',
-    sold: false,
+    sold: true,
   },
   {
     id: 55,
@@ -1275,7 +1275,7 @@ export const products = [
     brand: 'José Cuervo',
     includes: '-',
     includes_en: '-',
-    sold: false,
+    sold: true,
   },
   {
     id: 57,
