@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { XIcon, WhatsappLogoIcon, PlusIcon, GiftIcon } from '@phosphor-icons/react';
 import { products, PHONE_NUMBER } from '../data/products';
 import { useLanguage } from '../i18n';
@@ -44,7 +45,7 @@ export default function ComboModal({ combo, onClose }) {
             const isGift = giftIds.includes(p.id);
             return (
               <div key={`${p.id}-${i}`} className="combo-modal-product-wrap">
-                <div className="combo-modal-product">
+                <Link to={`/producto/${p.id}`} className="combo-modal-product" onClick={onClose} style={{ textDecoration: 'none', color: 'inherit' }}>
                   <div className="combo-modal-img">
                     <img src={p.img} alt={pName} />
                   </div>
@@ -53,7 +54,7 @@ export default function ComboModal({ combo, onClose }) {
                     ? <span className="combo-modal-product-label-gift"><GiftIcon size={12} weight="bold" /> {lang === 'en' ? 'Free' : 'Regalo'}</span>
                     : <span className="combo-modal-product-label-price">{p.price} €</span>
                   }
-                </div>
+                </Link>
                 {i < comboProducts.length - 1 && (
                   <span className="combo-modal-plus"><PlusIcon size={24} weight="bold" /></span>
                 )}

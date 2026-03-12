@@ -7,6 +7,7 @@ import CategoryBar from './components/CategoryBar';
 import ProductCard from './components/ProductCard';
 import ComboCard from './components/ComboCard';
 import ProductDetail from './components/ProductDetail';
+import ComboDetail from './components/ComboDetail';
 import Footer from './components/Footer';
 
 function Home() {
@@ -58,6 +59,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/producto/:id" element={<ProductDetail />} />
+          <Route path="/combo/:id" element={<ComboDetail />} />
         </Routes>
       </BrowserRouter>
     </LanguageProvider>

@@ -1696,6 +1696,71 @@ main {
   border-radius: 4px;
 }
 
+/* === COMBO DETAIL PAGE === */
+.combo-detail-products {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+}
+
+.combo-detail-product-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.combo-detail-product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.combo-detail-product:hover {
+  transform: translateY(-2px);
+  opacity: 0.85;
+}
+
+.combo-detail-img {
+  width: 140px;
+  height: 140px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.combo-detail-img img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.combo-modal-product:hover {
+  opacity: 0.85;
+  transform: translateY(-2px);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+@media (max-width: 600px) {
+  .combo-detail-products {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 1.5rem 1rem;
+  }
+  .combo-detail-img {
+    width: 100px;
+    height: 100px;
+  }
+}
+
 /* ========================================
    FOCUS-VISIBLE (ACCESSIBILITY)
    ======================================== */
