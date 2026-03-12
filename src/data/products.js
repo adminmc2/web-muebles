@@ -23,7 +23,7 @@ export const products = [
     includes_en: 'LED bulb',
     wallapopUrl: 'https://es.wallapop.com/item/lampara-de-mesa-dorada-y-blanca-1236186369',
     discount: 11,
-    sold: false,
+    sold: true,
   },
   {
     id: 2,
@@ -142,7 +142,7 @@ export const products = [
     includes: 'Set de 3 repisas + tornillería',
     includes_en: 'Set of 3 shelves + mounting hardware',
     wallapopUrl: 'https://es.wallapop.com/item/set-3-repisas-curvas-madera-1236254121',
-    sold: false,
+    sold: true,
   },
   {
     id: 8,
@@ -1131,7 +1131,7 @@ export const products = [
     includes: '-',
     includes_en: '-',
     wallapopUrl: 'https://es.wallapop.com/item/espejo-rejsby-organico-50x100-cm-1239063180',
-    sold: false,
+    sold: true,
   },
   {
     id: 51,
@@ -1305,17 +1305,6 @@ export const products = [
 
 export const combos = [
   {
-    id: 'combo-1',
-    name: 'Petit + Chunky + Jarrón',
-    name_en: 'Petit + Chunky + Vase',
-    desc: 'Lámpara Petit y Mesita Chunky juntas. Incluye jarrón decorativo de regalo. El combo perfecto para tu mesita de noche.',
-    desc_en: 'Petit Lamp and Chunky Nightstand together. Includes a free decorative vase. The perfect nightstand combo.',
-    productIds: [1, 2, 3],
-    comboPrice: 93,
-    bgColor: '#FFF0E0',
-    giftProductIds: [3],
-  },
-  {
     id: 'combo-3',
     name: 'Candela + Necoco + Cojín',
     name_en: 'Candela + Necoco + Cushion',
@@ -1338,16 +1327,6 @@ export const combos = [
     giftProductIds: [17],
   },
   {
-    id: 'combo-5',
-    name: 'Cajonera 80 cm + Cajonera 40 cm',
-    name_en: '80 cm Dresser + 40 cm Dresser',
-    desc: 'Las dos cajoneras Lino juntas. Perfectas para organizar tus armarios. Ahorra 7 €.',
-    desc_en: 'Both Linen dressers together. Perfect for organising your wardrobes. Save €7.',
-    productIds: [29, 30],
-    comboPrice: 68,
-    bgColor: '#F0E6F0',
-  },
-  {
     id: 'combo-6',
     name: 'Colchón + Canapé completo',
     name_en: 'Mattress + Full Bed Base',
@@ -1366,16 +1345,6 @@ export const combos = [
     productIds: [14, 44],
     comboPrice: 46,
     bgColor: '#E8DDD0',
-  },
-  {
-    id: 'combo-8',
-    name: 'Espejo REJSBY + Puf Betty',
-    name_en: 'REJSBY Mirror + Betty Pouf',
-    desc: 'Espejo orgánico REJSBY y puf redondo Betty juntos. Ahorra 2 €.',
-    desc_en: 'REJSBY organic mirror and Betty round pouf together. Save €2.',
-    productIds: [50, 14],
-    comboPrice: 30,
-    bgColor: '#F0EDE6',
   },
   {
     id: 'combo-9',
