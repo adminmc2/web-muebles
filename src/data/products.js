@@ -47,7 +47,7 @@ export const products = [
     includes_en: 'Free decorative vase',
     wallapopUrl: 'https://es.wallapop.com/item/mesita-noche-madera-mango-kaobany-sklum-1236222542',
     discount: 10,
-    sold: false,
+    sold: true,
   },
   {
     id: 18,
@@ -631,7 +631,7 @@ export const products = [
     includes: '-',
     includes_en: '-',
     wallapopUrl: 'https://es.wallapop.com/item/cajonera-cancun-4-cajones-lino-beige-80cm-1238586516',
-    sold: false,
+    sold: true,
   },
   {
     id: 30,
