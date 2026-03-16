@@ -457,7 +457,7 @@ export const products = [
     includes: '-',
     includes_en: '-',
     wallapopUrl: 'https://es.wallapop.com/item/robot-cocina-cecotec-mambo-cooking-total-1238511600',
-    sold: false,
+    sold: true,
   },
   {
     id: 21,
@@ -773,7 +773,7 @@ export const products = [
     includes: '4 tazas · 4 platos planos · 4 tazas café con plato · 8 platos ovalados · 6 platos postre ovalados · 2 boles grandes · 2 sets de 3 boles · 6 boles medianos',
     includes_en: '4 mugs · 4 flat plates · 4 coffee cups with saucer · 8 oval plates · 6 oval dessert plates · 2 large bowls · 2 sets of 3 bowls · 6 medium bowls',
     wallapopUrl: 'https://es.wallapop.com/item/vajilla-pierina-porcelana-blanca-completa-1238640171',
-    sold: false,
+    sold: true,
   },
   {
     id: 36,
@@ -845,7 +845,7 @@ export const products = [
     includes: '24 especias diferentes (lotes de 100 g)',
     includes_en: '24 different spices (100g batches)',
     wallapopUrl: 'https://es.wallapop.com/item/especiero-carrusel-16-botes-1238649196',
-    sold: false,
+    sold: true,
   },
   {
     id: 39,
@@ -1035,7 +1035,7 @@ export const products = [
     includes: '-',
     includes_en: '-',
     wallapopUrl: 'https://es.wallapop.com/item/cesto-ropa-zara-home-madera-beige-1239042538',
-    sold: false,
+    sold: true,
   },
   {
     id: 47,
@@ -1155,7 +1155,7 @@ export const products = [
     includes: '-',
     includes_en: '-',
     wallapopUrl: 'https://es.wallapop.com/item/escurreplatos-jupplies-2-niveles-negro-plata-1239065859',
-    sold: false,
+    sold: true,
   },
   {
     id: 52,
